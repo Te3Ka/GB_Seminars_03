@@ -43,5 +43,8 @@ if ((corrX == -1) || (corrY == -1))
     return;
 }
 
-Console.Write("Точка принадлежит координатной плоскости № ");
-Console.WriteLine(WhichQuarterPlane(x, y));
+int result = WhichQuarterPlane(x, y);
+
+Console.WriteLine($"Точка с координатами ({x}, {y}) принадлежит четверти № {result}");
+//Console.Write("Точка принадлежит координатной плоскости № ");
+//Console.WriteLine(WhichQuarterPlane(x, y));
