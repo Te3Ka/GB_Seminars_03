@@ -14,10 +14,10 @@ void Demonstrate(int num)
 {
     for (int i = 1; i <= num; i++)
     {
-        if(i == N)
+        if(i == num)
             Console.WriteLine(num * num);
         else
-            Console.WriteLine(i * i + ", ");
+            Console.Write(i * i + ", ");
     }
 }
 
