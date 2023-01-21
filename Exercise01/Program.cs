@@ -16,6 +16,19 @@ int CorrectCoordinates(int coordinate)
         return -1;
 }
 
+int WhichQuarterPlane(int x, int y)
+{
+    if ((x > 0) && (y > 0))
+        return 1;
+    else if ((x < 0) && (y > 0))
+        return 2;
+    else if ((x < 0) && (y < 0))
+        return 3;
+    else if ((x > 0) && (y < 0))
+        return 4;
+    return -1; 
+}
+
 Console.WriteLine("Программа показывает четверть плоскости, которой принадлежит введённая точка.");
 Console.Write("Введите координату X = ");
 int x = Convert.ToInt32(Console.ReadLine());
@@ -24,9 +37,11 @@ Console.Write("Введите координату Y = ");
 int y = Convert.ToInt32(Console.ReadLine());
 int corrY = CorrectCoordinates(y);
 
-if ((x == -1) && (y == -1))
+if ((corrX == -1) || (corrY == -1))
 {
     Console.WriteLine("Введены неверные координаты. Программа прервана.");
     return;
 }
 
+Console.Write("Точка принадлежит координатной плоскости № ");
+Console.WriteLine(WhichQuarterPlane(x, y));
