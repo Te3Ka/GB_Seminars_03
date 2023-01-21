@@ -27,7 +27,7 @@ int CoordinatesY(int number){
 Console.WriteLine("Программа показывает возможный диапазон координат по введённому номеру четверти плоскости.");
 Console.Write("Введите номер четверти плоскости: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if ((num != 1) || (num != 2) || (num != 3) || (num != 4)){
+if ((num != 1) && (num != 2) && (num != 3) && (num != 4)){
     Console.WriteLine($"Введённого номера плоскости {num} не существует. Программа прервана");
     return;
 }
