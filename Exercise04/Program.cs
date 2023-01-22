@@ -31,4 +31,10 @@ if (N <= 0)
     return;
 }
 
+if (N >= Math.Sqrt(2_147_483_647))
+{
+    Console.WriteLine("Введено число больше допустимого ограничения программы (N^2 >= 2 147 483 647)");
+    return;
+}
+
 Demonstrate(N);
